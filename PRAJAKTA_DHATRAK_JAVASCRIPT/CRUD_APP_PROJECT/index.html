@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CRUD Application using JavaScript</title>
+    <title>CRUD Application using JS</title>
     <style>
         table 
         {
@@ -41,20 +41,17 @@
 
 <script>
     var crudApp = new function () {
-
-        // AN ARRAY OF JSON OBJECTS WITH VALUES.
         this.myBooks = [
             { ID: '1', Book_Name: 'coa', Category: 'Computers', Price: 110 },
             { ID: '2', Book_Name: 'JAVA', Category: 'Programming', Price: 80.25},
-            { ID: '3', Book_Name: 'CHEMISTRY', Category: 'Science', Price: 210.40 }
+            { ID: '3', Book_Name: 'CHEMISTRY', Category: 'Science', Price: 210.40 },
+            { ID: '4', Book_Name: 'PHYSICS', Category: 'Science', Price: 310.40 }
         ]
 
         this.category = ['Business', 'Computers', 'Programming', 'Science','Social Science'];
         this.col = [];
 
         this.createTable = function () {
-
-            // EXTRACT VALUE FOR TABLE HEADER.
             for (var i = 0; i < this.myBooks.length; i++) {
                 for (var key in this.myBooks[i]) {
                     if (this.col.indexOf(key) === -1) {
@@ -178,7 +175,7 @@
             div.appendChild(table);    // ADD THE TABLE TO THE WEB PAGE.
         };
 
-        // ****** OPERATIONS START.
+        //  OPERATIONS START.
 
         // CANCEL.
         this.Cancel = function (oButton) {
@@ -295,7 +292,7 @@
             }
         }
 
-        // ****** OPERATIONS END.
+        // OPERATIONS END.
     }
 
     crudApp.createTable();
